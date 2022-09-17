@@ -13,9 +13,28 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
-from django.contrib import admin
-from django.urls import path
+#  recordar  configurar  estos  path  @ felipe < @ldordelly
+
+  from django.contrib import admin
+  from django.urls import path
+  
+  from appOwlTracker.models.account.create import create_account
+  from appOwlTracker.models.bank_accounts.create import create_bank_accounts
+  from appOwlTracker.models.data_log.create import create_data_log
+  from appOwlTracker.models.section_categories.create import create_section
+  
+
 
 urlpatterns = [
+
     path('admin/', admin.site.urls),
+    path("account/", create_account),
+    path("center_bank_accounts/",create_bank_accounts),
+    path(" registries/", create_data_log),
+    path("sections categories/", create_section), 
+    
+    
+    
+    
+    
 ]

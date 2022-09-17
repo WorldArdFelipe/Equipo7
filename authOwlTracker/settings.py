@@ -10,7 +10,6 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.1/ref/settings/
 """
 
-from datetime import timedelta
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -40,8 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework_simplejwt',
     "rest_framework",
-    'rest_framework_simplejwt',
-    "appOwlTracker",
+    "appOwlTracker"
 ]
 
 MIDDLEWARE = [
@@ -54,6 +52,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
+<<<<<<< HEAD
 REST_FRAMEWORK = {
     
     'DEFAULT_AUTHENTICATION_CLASSES':(
@@ -76,6 +75,8 @@ SIMPLE_JWT = {
     
 }
 
+=======
+>>>>>>> parent of 7396089 (actulizacion de capa jwt/ add directorios de models/viws/)
 ROOT_URLCONF = 'authOwlTracker.urls'
 
 TEMPLATES = [

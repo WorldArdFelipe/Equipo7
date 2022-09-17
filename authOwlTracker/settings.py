@@ -29,7 +29,7 @@ DEBUG = True
 ALLOWED_HOSTS = []
 
 
-# Application definition here 
+# Application definition heree
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -58,7 +58,7 @@ REST_FRAMEWORK = {
     
     'DEFAULT_AUTHENTICATION_CLASSES':(
        
-        'rest_framework_simplejwt.authentication.JWTAuthentication',
+     'rest_framework_simplejwt.authentication.JWTAuthentication',
     )
 
 }

@@ -99,12 +99,32 @@ WSGI_APPLICATION = 'authOwlTracker.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
+
+#  config items for sqlite3 
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
+
+
+# configured to use PostgreSQL @felipe < @ldordelly  @< alba 
+#  pool de  configuacion here.!!
+
+"""""
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'd98tmug8spe8ao',
+        'USER': "xmkmrzljahqqib",
+        'PASSWORD' : "3cc264ccfdf44ef300df2074b3f3f584eeeb3ccbcdeac34b9f7fd69a6feead2f",
+        'HOST' : "ec2-34-231-42-166.compute-1.amazonaws.com",
+        'PORT' : "5432",
+    }
+}
+"""
+
 
 
 # Password validation

@@ -11,7 +11,7 @@ class data_log(models.Model):
     value_amount = models.BigIntegerField("13")
     id_categories = models.IntegerField()
     data_time = models.DateTimeField()
-    id_banck_account = models.ForeignKey()
+    id_bank_account = models.ForeignKey()
     
     
     

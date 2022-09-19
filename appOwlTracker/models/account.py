@@ -8,7 +8,7 @@ class account(models.Model):
     username = models.CharField(max_length=100)
     email = models.CharField(max_length=64)
     password = models.IntegerField( max_length=64)
-    id_banck_account = models.SmallIntegerField()
+    id_bank_account = models.SmallIntegerField()
     
     
     

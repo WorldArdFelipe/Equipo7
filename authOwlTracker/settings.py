@@ -59,8 +59,10 @@ REST_FRAMEWORK = {
        
      'rest_framework_simplejwt.authentication.JWTAuthentication',
     )
-
 }
+
+AUTH_USER_MODEL = 'appOwlTracker.User'
+
 ##  estructured algoritm toke jwt authentication/
 SIMPLE_JWT = {
     
@@ -71,7 +73,7 @@ SIMPLE_JWT = {
     'UPDATE_LAST_LOGIN': False,
     'ALGORITHM': 'HS256',
     'USER_ID_FIELD': 'id',
-    'USER_ID_CLAIM': 'user_id',
+    'USER_ID_CLAIM': 'id',
     
 }
 
@@ -101,29 +103,31 @@ WSGI_APPLICATION = 'authOwlTracker.wsgi.application'
 
 
 #  config items for sqlite3 
+"""
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
-
+"""
 
 # configured to use PostgreSQL @felipe < @ldordelly  @< alba 
 #  pool de  configuacion here.!!
 
-"""""
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'd98tmug8spe8ao',
-        'USER': "xmkmrzljahqqib",
-        'PASSWORD' : "3cc264ccfdf44ef300df2074b3f3f584eeeb3ccbcdeac34b9f7fd69a6feead2f",
-        'HOST' : "ec2-34-231-42-166.compute-1.amazonaws.com",
+        'NAME': 'd6piu3fnnd103e',
+        'USER': "uftomnnenqmjss",
+        'PASSWORD' : "cc87357d11090d33d04d9e34246d828ee75ced81aa056846793765a36a8a9ad9",
+        'HOST' : "ec2-18-214-134-226.compute-1.amazonaws.com",
         'PORT' : "5432",
     }
 }
-"""
+
 
 
 

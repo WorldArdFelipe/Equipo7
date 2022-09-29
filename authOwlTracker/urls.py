@@ -14,10 +14,36 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+from django.urls import path,include
+from rest_framework_simplejwt.views import (TokenObtainPairView, TokenRefreshView)
+from appOwlTracker import views
+
 
 urlpatterns = [
-    path('home/', admin.site.urls),
-    path('dashboard/', admin.site.urls),
-    path('seguimiento/', admin.site.urls),
+    path('admin/', admin.site.urls),
+    #path('dashboard/', admin.site.urls),
+    #path('seguimiento/', admin.site.urls),
+    
+    # Default 
+    path('login/',TokenObtainPairView.as_view()),
+    path('refresh/',TokenRefreshView.as_view()),
+    
+    
+    # Url crear usuario o , [POST]
+    path('create_user/',views.UserView.as_view()),
+        
+    # Url [GET],[PUT],[DELETE]
+    path('user/<int:id>',views.UserView.as_view()),
+    
+    # Url consulta todos los usuarios
+    path('all_user/',views.AllUserView.as_view()),
+    
+    
+    # Url add Bank [POST]
+    path('create_bank/',views.BankAccountView.as_view()),
+    
+    
+    
+    path('create_movements/',views.MovementsRecordedView.as_view()),
+    path('movements/<int:id_user>',views.MovementsRecordedView.as_view()),
 ]

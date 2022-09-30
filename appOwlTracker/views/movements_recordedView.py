@@ -33,10 +33,19 @@ class MovementsRecordedView(generics.ListAPIView):
         
         return Response(return_data, status=status.HTTP_201_CREATED)
     
-
     def put(self,request,*args, **kwargs):
-        return
-    
+        movements =  Movements_Recorded.objects.get(id = kwargs['id'])
+        serializer_movements = MovementsSerializer(movements,data=request.data)
+        serializer_movements.is_valid(raise_exception = True)
+        serializer_movements.save()
+        
+        return Response(MovementsSerializer(movements).data, status=status.HTTP_201_CREATED)
+
     def delete(self,request,*args, **kwargs):
-        return
+        movements =  Movements_Recorded.objects.filter(id = kwargs['id']).first()
+        movements.delete()
+        
+        stringResponde =  {'detail':'Registro eliminado correctamente'}
+        
+        return Response(stringResponde,status=status.HTTP_200_OK)
     

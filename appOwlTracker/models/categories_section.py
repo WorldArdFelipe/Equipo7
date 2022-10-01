@@ -7,3 +7,4 @@ class Categories_Section(models.Model):
     name_categories = models.CharField(max_length=45)
     #data_log = models.ForeignKey()
     
+    

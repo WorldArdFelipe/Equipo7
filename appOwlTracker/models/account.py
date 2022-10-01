@@ -10,6 +10,3 @@ class account(models.Model):
     password = models.IntegerField( max_length=64)
     id_bank_account = models.SmallIntegerField()
     
-    
-    
-    

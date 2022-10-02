@@ -1,1 +1,0 @@
-#class crear_seguimiento_view(APIView):

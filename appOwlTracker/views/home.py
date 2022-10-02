@@ -1,1 +1,0 @@
-#class crear_home_view(APIView):

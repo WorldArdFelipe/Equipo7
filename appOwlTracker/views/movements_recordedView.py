@@ -49,3 +49,5 @@ class MovementsRecordedView(generics.ListAPIView):
         
         return Response(stringResponde,status=status.HTTP_200_OK)
     
+    
+    

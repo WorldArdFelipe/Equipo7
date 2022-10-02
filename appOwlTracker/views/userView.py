@@ -27,7 +27,7 @@ class UserView(generics.ListAPIView):
         tokenSerializer = TokenObtainPairSerializer(data=tokenData)
         tokenSerializer.is_valid(raise_exception=True)
         return Response(tokenSerializer.validated_data, status=status.HTTP_201_CREATED)
-
+  ##### 
     def put(self,request,*args, **kwargs):
         usuario =  User.objects.get(id = kwargs['id'])
         usuario_serializer = UserSerializer(usuario,data=request.data)

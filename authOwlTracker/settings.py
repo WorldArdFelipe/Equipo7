@@ -26,7 +26,10 @@ SECRET_KEY = 'django-insecure-dk!=q*ypn#nwot0t1a-ng=2h(@pwfuyzxdc&zwgwfw4&c5phld
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+#ESTO ES OPCIONAL. EL FRONTEND SE PUEDE PRESENTAR EN LOCAL.
+#Los CORS Son permisos que el BE le da al FE. ¿Desde qué servidor voy a hacer la petición?
+ALLOWED_HOSTS = ['127.0.0.1']
+CORS_ALLOWED_ORIGINS = ['http://127.0.0.1:8000/', 'https://misiontic-owltracker.herokuapp.com/', 'https://mision-tic-owltracker-fe.herokuapp.com/']
 
 
 # Application definition heree
